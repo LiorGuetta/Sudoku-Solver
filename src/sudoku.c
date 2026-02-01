@@ -8,7 +8,8 @@ int solve_grid(int grid[9][9],int row,int col)
     } 
     if (col == 9) 
     { 
-        row++; col = 0; 
+        row++;
+        col = 0; 
     }
     if (grid[row][col] != 0)
     {
