@@ -84,12 +84,19 @@ void fill_diagonal_boxes(int grid[9][9]) {
 }
 
 void print_grid(int grid[9][9]) {
+    const char* emojis[] = {"#️⃣", "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣"};
+
     for (int i = 0; i < 9; i++) {
         for (int j = 0; j < 9; j++) {
-            printf("%d ", grid[i][j]);
-            if ((j + 1) % 3 == 0 && j < 8) printf("| ");
+            int val = grid[i][j];
+            printf("%s ", emojis[val]);
+            if ((j + 1) % 3 == 0 && j < 8) {
+                printf(" | ");
+            }
         }
         printf("\n");
-        if ((i + 1) % 3 == 0 && i < 8) printf("------+-------+------\n");
+        if ((i + 1) % 3 == 0 && i < 8) {
+            printf("-------+--------+-------\n");
+        }
     }
 }
